@@ -16,7 +16,6 @@ def plotResults(potFunc,points):
     plt.plot(*zip(*points),linewidth=2.,marker='o',markersize=15.)
     plt.show()
 
-#plotPotential()
 results = NEB(51,np.array([-2.*np.pi,0]),np.array([2.*np.pi,0]),potential)
 toPlot = map(lambda x: x.position,results)
 plotResults(potential,toPlot)
